@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homework6.css">
+    <title>Document</title>
+</head>
+  <body >
+    
+  
+        <section class="container" >
+            <div class="row">
+                <h1>My calculator</h1>
+            </div>
+          <div class="row" >
+            <input name="number1" placeholder="First number" type="number" id="num1" /></td>
+            <input name="number2" placeholder="Second Number" type="number" size="10" id="num2" /></td>
+            <input type="" placeholder="Result" id="result" readonly /></td>
+          </div>
+          <div class="button">
+              <button class="b" onclick="showresult('1')">+</button>
+              <button class="b"  onclick="showresult('2')">-</button>
+              <button class="b"  onclick="showresult('3')">*</button>
+              <button class="b"  onclick="showresult('4')">/</button>
+          </div>
+        </section>
+   
+    <script>
+        function showresult(choice) {
+            var n1 = parseFloat(document.getElementById('num1').value);
+            var n2 = parseFloat(document.getElementById('num2').value);
+            var r;
+            
+            switch(choice) {
+                case '1':
+                    r = n1 + n2;
+                    break;
+                case '2':
+                    r = n1 - n2;
+                    break;
+                case '3':
+                    r = n1 * n2;
+                    break;
+                case '4':
+                    r = n1 / n2;
+                    break;
+                case '5':
+                default:
+                    break;
+            }
+        
+            document.getElementById('result').value = r;
+        }
+          
+    </script>
+
+  </body>
+</html>
